@@ -16,6 +16,7 @@ import com.example.hrworker.entities.Worker;
 import com.example.hrworker.repositories.WorkerRepository;
 import com.sun.org.slf4j.internal.Logger;
 
+@RefreshScope
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerResource {
