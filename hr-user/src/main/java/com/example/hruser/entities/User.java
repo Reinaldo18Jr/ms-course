@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
@@ -24,6 +25,8 @@ public class User implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	@Column(unique = true)
 	private String email;
 	private String password;
 	
